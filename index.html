@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spaco Delivery offers local and international shipping, cargo delivery and shipment support.">
+  <title>Spaco Delivery | Local & International Shipping</title>
+  <style>
+    :root{--navy:#10243a;--blue:#1769aa;--orange:#ff8a32;--ink:#172536;--muted:#667789;--paper:#f5f8fb;--white:#fff;--line:#e1e8ef}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+    .brand{font-size:1.35rem;font-weight:900;letter-spacing:-.04em;color:var(--navy)}.brand span{color:var(--orange)}
+    nav{display:flex;gap:25px;align-items:center;font-size:.95rem;font-weight:700}nav a:hover{color:var(--blue)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:10px;padding:13px 18px;background:var(--orange);color:#20190f;font-weight:800;cursor:pointer;font-size:.95rem}
+    .btn.secondary{background:var(--blue);color:#fff}.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--navy)}
+    .hero{background:linear-gradient(115deg,rgba(11,31,51,.96),rgba(18,73,113,.88)),radial-gradient(circle at 80% 20%,#377ca8,transparent 35%);color:#fff;padding:76px 0 68px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:45px}
+    .eyebrow{display:inline-block;color:#ffd0a8;background:rgba(255,138,50,.15);border:1px solid rgba(255,193,145,.3);padding:6px 11px;border-radius:999px;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+    h1{font-size:clamp(2.5rem,5vw,4.6rem);line-height:1.04;letter-spacing:-.055em;margin:18px 0}h1 span{color:#ffb16f}
+    .hero p{font-size:1.12rem;color:#e2ebf3;max-width:570px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+    .hero .ghost{background:transparent;color:#fff;border-color:#ffffff66}
+    .hero-art{min-height:330px;position:relative;display:grid;place-items:center}
+    .orbit{width:min(100%,390px);aspect-ratio:1;border:1px solid #ffffff30;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#ffffff12,transparent 65%)}
+    .ship{font-size:7rem;filter:drop-shadow(0 18px 20px #07162680);transform:translateY(-4px)}
+    .floating{position:absolute;background:#fff;color:var(--navy);padding:12px 15px;border-radius:13px;box-shadow:0 14px 40px #06172655;font-weight:800;font-size:.88rem}
+    .floating small{display:block;color:var(--muted);font-weight:600}.f1{top:16%;left:-3%}.f2{right:-3%;bottom:15%}
+    .trust{padding:22px 0;background:#fff;border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.trust-item{display:flex;align-items:center;gap:12px;font-weight:800}.trust-icon{width:42px;height:42px;display:grid;place-items:center;background:#eaf3fb;border-radius:12px;font-size:1.25rem}
+    section{padding:76px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 38px}.section-head h2{font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.12;letter-spacing:-.04em;margin:0 0 12px;color:var(--navy)}.section-head p{margin:0;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:18px;padding:25px;background:#fff;box-shadow:0 10px 35px #10243a08}.card .symbol{font-size:1.8rem;background:#eef5fb;width:54px;height:54px;border-radius:15px;display:grid;place-items:center}.card h3{margin:16px 0 7px;color:var(--navy)}.card p{margin:0;color:var(--muted)}
+    .tracking{background:var(--paper)}.track-panel{max-width:760px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 16px 45px #10243a0a}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}.field label{font-size:.9rem;font-weight:800}.field input,.field select,.field textarea{width:100%;border:1px solid #ccd8e3;border-radius:10px;padding:13px 14px;font:inherit;background:#fff;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid #1769aa22;border-color:var(--blue)}
+    .track-row{display:grid;grid-template-columns:1fr auto;gap:10px}.notice{font-size:.88rem;color:var(--muted);margin:14px 0 0}.result{display:none;margin-top:18px;padding:17px;border-radius:12px;background:#edf7f0;border:1px solid #cbe8d2}.result.error{background:#fff3ed;border-color:#ffd4be}.result strong{display:block;margin-bottom:4px}
+    .quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}.quote-copy h2{font-size:2.5rem;line-height:1.1;letter-spacing:-.04em;color:var(--navy);margin:0 0 15px}.quote-copy p{color:var(--muted)}.quote-copy ul{padding-left:20px}.quote-copy li{margin:9px 0}.form-panel{border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 16px 45px #10243a0a}.form-two{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+    .contact{background:var(--navy);color:#fff}.contact-grid{display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{font-size:2.2rem;line-height:1.1;margin:0 0 10px}.contact p{color:#d3deea;margin:0}
+    footer{padding:24px 0;background:#0a1928;color:#bdc9d5;font-size:.88rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .smallprint{font-size:.8rem;color:var(--muted)}.mobile-menu{display:none}
+    @media(max-width:780px){nav{gap:12px;font-size:.84rem}.nav>.btn{display:none}.hero-grid,.quote-grid{grid-template-columns:1fr}.hero{padding:55px 0}.hero-art{min-height:260px}.orbit{width:270px}.ship{font-size:5rem}.f1{left:0}.f2{right:0}.cards{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr;gap:12px}.contact-grid{align-items:flex-start;flex-direction:column}section{padding:58px 0}}
+    @media(max-width:520px){nav a:not(.keep){display:none}.form-two{grid-template-columns:1fr}.track-row{grid-template-columns:1fr}.track-panel,.form-panel{padding:19px}.hero-actions .btn{width:100%}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Spaco Delivery home">SPACO<span> DELIVERY</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#tracking">Track parcel</a><a href="#quote">Get a quote</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#quote">Ship with us ↗</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Local & international logistics</span>
+        <h1>Your goods.<br><span>Our commitment.</span></h1>
+        <p>Shipping made simpler. Spaco Delivery helps individuals and businesses move parcels and cargo with care, clear communication, and dependable support.</p>
+        <div class="hero-actions"><a class="btn" href="#quote">Request a shipping quote →</a><a class="btn ghost" href="#tracking">Track a shipment</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit"><div class="ship">🚢</div><div class="floating f1">📦 Parcel care<small>Handled with attention</small></div><div class="floating f2">🌍 Local + global<small>Shipping support</small></div></div>
+      </div>
+    </div>
+  </section>
+  <div class="trust"><div class="container trust-grid">
+    <div class="trust-item"><span class="trust-icon">📦</span><span>Parcel & cargo support</span></div>
+    <div class="trust-item"><span class="trust-icon">🌍</span><span>Local and international</span></div>
+    <div class="trust-item"><span class="trust-icon">💬</span><span>Helpful customer service</span></div>
+  </div></div>
+  <section id="services">
+    <div class="container">
+      <div class="section-head"><h2>Shipping solutions for every journey</h2><p>From local deliveries to cross-border cargo, tell us what you need and we’ll help you find the next step.</p></div>
+      <div class="cards">
+        <article class="card"><div class="symbol">🛵</div><h3>Local Delivery</h3><p>For parcels and goods moving between locations within Nigeria. Share your pickup and delivery details for a quote.</p></article>
+        <article class="card"><div class="symbol">✈️</div><h3>International Shipping</h3><p>Shipping support for goods moving between countries, subject to route, item restrictions, and service availability.</p></article>
+        <article class="card"><div class="symbol">🚢</div><h3>Freight & Cargo</h3><p>Ask about larger shipments, cargo handling, and options that fit your shipment size and timeline.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="tracking" id="tracking">
+    <div class="container">
+      <div class="section-head"><h2>Track your shipment</h2><p>Enter your tracking number to check a shipment update.</p></div>
+      <div class="track-panel">
+        <form id="trackingForm">
+          <div class="field"><label for="trackingNumber">Tracking number</label><div class="track-row"><input id="trackingNumber" name="trackingNumber" placeholder="e.g. SPC-DEMO-001" required><button class="btn secondary" type="submit">Track parcel</button></div></div>
+        </form>
+        <div id="trackingResult" class="result" role="status" aria-live="polite"></div>
+        <p class="notice"><strong>Setup note:</strong> This starter site uses demo tracking examples only. Live tracking requires a shipment database or integration with your delivery/logistics provider.</p>
+      </div>
+    </div>
+  </section>
+  <section id="quote">
+    <div class="container quote-grid">
+      <div class="quote-copy">
+        <span class="eyebrow" style="background:#fff1e6;color:#a34b0a;border-color:#ffd9bd">Get started</span>
+        <h2>Tell us what you need to ship.</h2>
+        <p>Fill in the details below. The form will prepare a message for Spaco Delivery on WhatsApp so you can discuss pricing and availability.</p>
+        <ul><li>Pickup and destination details</li><li>Parcel or cargo type</li><li>Preferred shipping method</li></ul>
+        <p class="smallprint">Quotes are confirmed only after the shipment details and service availability have been reviewed.</p>
+      </div>
+      <div class="form-panel">
+        <form id="quoteForm">
+          <div class="form-two">
+            <div class="field"><label for="customerName">Your name *</label><input id="customerName" required placeholder="Full name"></div>
+            <div class="field"><label for="customerPhone">Phone / WhatsApp *</label><input id="customerPhone" required type="tel" placeholder="+234..."></div>
+            <div class="field"><label for="origin">Pickup location *</label><input id="origin" required placeholder="City, country"></div>
+            <div class="field"><label for="destination">Destination *</label><input id="destination" required placeholder="City, country"></div>
+            <div class="field"><label for="shipmentType">Shipment type *</label><select id="shipmentType" required><option value="">Choose one</option><option>Documents</option><option>Parcel</option><option>Business goods</option><option>Freight / cargo</option></select></div>
+            <div class="field"><label for="method">Shipping method</label><select id="method"><option>Recommend an option</option><option>Local delivery</option><option>Air freight</option><option>Sea freight</option></select></div>
+          </div>
+          <div class="field"><label for="details">Weight, dimensions, and extra details</label><textarea id="details" rows="3" placeholder="Approximate weight, size, item description, preferred timeline..."></textarea></div>
+          <button class="btn" type="submit" style="width:100%">Send quote request on WhatsApp ↗</button>
+          <p class="smallprint">Please do not include passwords, payment PINs, or other sensitive information.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div><h2>Need help with a shipment?</h2><p>Contact Spaco Delivery to discuss your delivery or cargo needs.</p><p style="margin-top:12px"><strong>Email:</strong> <a href="mailto:Spacodelivery7@gmail.com">Spacodelivery7@gmail.com</a></p><p style="margin-top:6px"><strong>WhatsApp:</strong> <a href="https://wa.me/84865914131" target="_blank" rel="noopener">+84865914131</a></p></div>
+      <a id="contactWhatsApp" class="btn" href="#" target="_blank" rel="noopener">Chat with us on WhatsApp ↗</a>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-row"><span>© <span id="year"></span> Spaco Delivery. All rights reserved.</span><span>Local & international shipping</span></div></footer>
+<script>
+  // Business WhatsApp number supplied by the owner.
+  // Use country code + number only, no "+" or spaces.
+  const BUSINESS_WHATSAPP = "84865914131";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const whatsappUrl = "https://wa.me/" + BUSINESS_WHATSAPP;
+  document.getElementById("contactWhatsApp").href = whatsappUrl;
+
+  document.getElementById("quoteForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const get = id => document.getElementById(id).value.trim();
+    const message = [
+      "Hello Spaco Delivery, I would like a shipping quote.",
+      "Name: " + get("customerName"),
+      "Phone: " + get("customerPhone"),
+      "Pickup: " + get("origin"),
+      "Destination: " + get("destination"),
+      "Shipment type: " + get("shipmentType"),
+      "Shipping method: " + get("method"),
+      "Extra details: " + (get("details") || "Not provided")
+    ].join("\\n");
+    window.open(whatsappUrl + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+  });
+
+  // Demonstration-only examples. Replace with a secure backend/API for real tracking.
+  const demoShipments = {
+    "SPC-DEMO-001": {status:"Shipment information received", detail:"A sample tracking record. This is a demo, not a live parcel."},
+    "SPC-DEMO-002": {status:"In transit (demo)", detail:"A sample tracking record. This is a demo, not a live parcel."},
+    "SPC-DEMO-003": {status:"Delivered (demo)", detail:"A sample tracking record. This is a demo, not a live parcel."}
+  };
+  document.getElementById("trackingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const number = document.getElementById("trackingNumber").value.trim().toUpperCase();
+    const result = document.getElementById("trackingResult");
+    result.style.display = "block";
+    result.classList.remove("error");
+    if (demoShipments[number]) {
+      result.innerHTML = "<strong>" + demoShipments[number].status + "</strong><span>" + demoShipments[number].detail + "</span>";
+    } else {
+      result.classList.add("error");
+      result.innerHTML = "<strong>No demo record found</strong><span>This starter website is not connected to live shipment data yet. Please contact Spaco Delivery to check your parcel.</span>";
+    }
+  });
+</script>
+</body>
+</html>
